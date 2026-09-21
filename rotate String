@@ -1,0 +1,44 @@
+class Solution {
+    public boolean rotateString(String s, String goal) {
+        if (s.length() != goal.length())
+            return false;
+
+        return (s + s).contains(goal);
+    }
+}
+
+//rotated digits
+
+class Solution {
+    public int rotatedDigits(int n) {
+        int count = 0;
+
+        for (int i = 1; i <= n; i++) {
+            int num = i;
+            boolean valid = true;
+            boolean different = false;
+
+            while (num > 0) {
+                int digit = num % 10;
+
+                if (digit == 2 || digit == 5 ||
+                    digit == 6 || digit == 9) {
+                    if (digit == 2 || digit == 5 ||
+                        digit == 6 || digit == 9)
+                        different = true;
+                } else if (digit == 0 || digit == 1 || digit == 8) {
+                } else {
+                    valid = false;
+                    break;
+                }
+
+                num /= 10;
+            }
+
+            if (valid && different)
+                count++;
+        }
+
+        return count;
+    }
+}
