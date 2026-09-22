@@ -1,0 +1,126 @@
+//EVEN OR ODD CHECKER
+
+import java.util.Scanner;
+
+public class EvenOdd {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        System.out.print("Enter an integer: ");
+        int num = scanner.nextInt();
+        
+        if (num % 2 == 0) {
+            System.out.println(num + " is Even.");
+        } else {
+            System.out.println(num + " is Odd.");
+        }
+        scanner.close();
+    }
+}
+
+//Factorial of a Number
+
+public class Factorial {
+    public static void main(String[] args) {
+        int n = 5;
+        long factorial = 1;
+        for (int i = 1; i <= n; i++) {
+            factorial *= i;
+        }
+        System.out.println("Factorial of " + n + " is " + factorial);
+    }
+}
+
+//Reverse a String
+
+public class ReverseString {
+    public static void main(String[] args) {
+        String str = "Java";
+        String reversed = "";
+        for (int i = str.length() - 1; i >= 0; i--) {
+            reversed += str.charAt(i);
+        }
+                System.out.println("Original: " + str);
+        System.out.println("Reversed: " + reversed);
+    }
+}
+
+//Convert Celsius to Fahrenheit
+
+public class TempConverter {
+    public static void main(String[] args) {
+	        double celsius = 25.0;
+        double fahrenheit = (celsius * 9 / 5) + 32;
+	        
+        System.out.println(celsius + "°C is equal to " + fahrenheit + "°F");
+	    }
+	}
+
+//Check for Leap Year
+
+public class LeapYear {
+    public static void main(String[] args) {
+        int year = 2024;
+        
+        boolean isLeap = (year % 4 == 0 && year % 100 != 0) || (year % 400 == 0);
+        
+        if (isLeap) {
+            System.out.println(year + " is a Leap Year.");
+        } else {
+            System.out.println(year + " is NOT a Leap Year.");
+        }
+    }
+}
+
+//Multiplication Table
+
+public class MultiplicationTable {
+    public static void main(String[] args) {
+        int num = 5;
+        
+        System.out.println("Multiplication Table for " + num + ":");
+        for (int i = 1; i <= 10; i++) {
+            System.out.println(num + " x " + i + " = " + (num * i));
+        }
+    }
+}
+
+//6. Find the ASCII Value of a Character
+import java.util.Scanner;
+
+public class AsciiValue {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        System.out.print("Enter a character: ");
+        char ch = scanner.next().charAt(0);
+        
+        int ascii = ch; // Implicit casting from char to int
+        
+        System.out.println("The ASCII value of '" + ch + "' is: " + ascii);
+        scanner.close();
+    }
+}
+	//. Find the Greatest Common Divisor (GCD) of Two Numbers
+import java.util.Scanner;
+
+public class GcdCalculator {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        System.out.print("Enter two integers: ");
+        int a = scanner.nextInt();
+        int b = scanner.nextInt();
+        
+        int gcd = 1;
+        for (int i = 1; i <= a && i <= b; i++) {
+            if (a % i == 0 && b % i == 0) {
+                gcd = i;
+            }
+        }
+        
+        System.out.println("The GCD of " + a + " and " + b + " is: " + gcd);
+        scanner.close();
+    }
+}
+	
+
+
+Output: Factorial of 5 is 120
